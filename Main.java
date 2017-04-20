@@ -7,8 +7,10 @@ import java.io.InputStreamReader;
 public class Main {
 
     public static void main(String[] args) {
-
+     Dado l = new Dado();
 	 int i = 0;
+	 int j=0;
+	 double res;
         BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
 
 	 do{
@@ -26,7 +28,10 @@ public class Main {
          }
          switch(i){
              case 1:
+                 res=l.lanza_dado();
+
                  break;
+
 
              case 2:
                  break;
