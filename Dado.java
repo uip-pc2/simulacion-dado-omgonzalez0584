@@ -4,10 +4,12 @@ import java.util.Random;
 
 public class Dado {
 
-    public double lanza_dado() {
-        Double resultado;
+    public int lanza_dado() {
+        double resultado;
         resultado = Math.random() * 6;
-        return(resultado);
+        return(int) resultado;
     }
-
+    public void imprimir_resultado(int res){
+          System.out.print("El resultado es: "+ res);
+    }
 }
