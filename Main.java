@@ -1,8 +1,12 @@
-package app;
+/*Simular Dado
+Omar Gonzalez 8-775-963
+ */
 
+package app;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 public class Main {
 
@@ -10,7 +14,10 @@ public class Main {
         Dado l = new Dado();
         int i = 0;
         int j = 0;
-        int res;
+        int res =0;
+        ArrayList<Integer> ar = new ArrayList<Integer>();
+
+
         BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
         do{
             System.out.println("\n Simulacion de dado: ");
@@ -28,15 +35,19 @@ public class Main {
             switch (i) {
                 case 1:
                     res = l.lanza_dado();
-                    l.imprimir_resultado(res);
+                    final boolean add = ar.add(res);
+
                     break;
                 case 2:
+                    l.imprimir_resultado(j);
                     break;
 
                 case 3:
+                     l.imprimir_todos_resultados(ar);
                     break;
 
                 case 4:
+                    System.out.println("\n Gracias por su Participacion.....");
                     break;
 
                 default:
@@ -44,7 +55,7 @@ public class Main {
 
 
             }
-
+            j = res; //Guarda Resultado del primer resultado
         } while (i != 4);
 
 
